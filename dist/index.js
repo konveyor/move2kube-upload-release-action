@@ -12674,7 +12674,7 @@ function get_release_by_tag(tag, octokit) {
             return resp.data;
         }
         catch (error) {
-            if (error.status !== 404) {
+            if (error.status !== 404 && error.status !== '404') {
                 core.info(`Failed to get release by tag. Not a 404 error. Throwing.`);
                 throw error;
             }
