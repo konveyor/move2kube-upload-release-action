@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.2.1] - 2020-10-07
+Fix if conditions to handle new HTTP status codes which are strings instead of integers.
+
 ## [2.2.0] - 2020-10-07
 - Add support for ceating a new release in a foreign repository [#25](https://github.com/svenstaro/upload-release-action/pull/25) (thanks @kittaakos)
 - Upgrade all deps

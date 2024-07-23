@@ -30,7 +30,7 @@ async function get_release_by_tag(
     core.debug(`response from get release by tag: ${JSON.stringify(resp)}`)
     return resp.data
   } catch (error) {
-    if (error.status !== 404) {
+    if (error.status !== 404 && error.status !== '404') {
       core.info(`Failed to get release by tag. Not a 404 error. Throwing.`)
       throw error
     }
